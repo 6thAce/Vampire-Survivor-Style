@@ -13,3 +13,7 @@ func shoot():
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = $Shootingpoint.global_position
 	$Shootingpoint.add_child(new_bullet)
+
+
+func _on_timer_timeout() -> void:
+	shoot()
